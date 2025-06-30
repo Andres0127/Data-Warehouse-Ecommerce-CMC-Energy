@@ -148,23 +148,30 @@ Para dudas o mejoras, contacta al desarrollador del dashboard.
 1. **Instala PostgreSQL**  
    Descarga e instala PostgreSQL desde [https://www.postgresql.org/download/](https://www.postgresql.org/download/).
 
-2. **Crea la base de datos**  
+2. **Crea la base de datos vacía**  
    Abre la terminal de PostgreSQL (psql) o usa PgAdmin y ejecuta:
 
    ```sql
    CREATE DATABASE ecommerce_dw;
    ```
 
-3. **Carga el esquema del DW**  
-   Ubica el archivo `DDL.sql` en tu equipo. Luego, desde la terminal, ejecuta:
+3. **Restaura el backup del DW**  
+   Si tienes el archivo `BackupDW` generado desde PgAdmin (por ejemplo, `BackupDW.backup`):
 
-   ```sh
-   psql -U postgres -d ecommerce_dw -f DDL.sql
-   ```
-   > Cambia `postgres` por tu usuario si es diferente.
+   - **Usando PgAdmin:**
+     1. Haz clic derecho sobre la base de datos `ecommerce_dw` y selecciona **Restore...**
+     2. En "Format", selecciona **Custom or tar**.
+     3. En "Filename", selecciona tu archivo `BackupDW`.
+     4. Haz clic en **Restore** y espera a que termine el proceso.
 
-4. **Carga tus datos**  
-   Inserta tus datos en las tablas creadas usando scripts SQL, PgAdmin o herramientas ETL.
+   - **Usando la terminal:**
+     ```sh
+     pg_restore -U postgres -d ecommerce_dw -1 BackupDW.backup
+     ```
+     > Cambia `postgres` por tu usuario y `BackupDW.backup` por la ruta y nombre de tu archivo.
+
+4. **Verifica la carga de datos**  
+   Asegúrate de que las tablas y datos estén correctamente restaurados en la base de datos.
 
 5. **Configura la conexión en el dashboard**  
    Asegúrate de que la variable `DB_URL` en `dashboard_dw.py` tenga el usuario, contraseña y puerto correctos para tu instalación.
