@@ -6,7 +6,7 @@ import plotly.express as px
 # ---------------------------------------
 # 1. CONFIGURACIÓN DE LA CONEXIÓN
 # ---------------------------------------
-DB_URL = "postgresql+psycopg2://postgres:200127@localhost:5432/ecommerce_dw"
+DB_URL = "postgresql+psycopg2://postgres:password@localhost:5432/ecommerce_dw"
 engine = create_engine(DB_URL)
 
 @st.cache_data(ttl=300)
