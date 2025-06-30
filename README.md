@@ -17,7 +17,7 @@ Este proyecto implementa un **dashboard interactivo** en Python usando [Streamli
 ## Requisitos Previos
 
 - **Python 3.8+**
-- **PostgreSQL** con el esquema de DW ya cargado (ver archivo `DDL.sql`).
+- **PostgreSQL** con el esquema de DW ya cargado (ver archivo `BackupDW.sql`).
 - Acceso a la base de datos con las tablas y datos correspondientes.
 
 ---
@@ -50,7 +50,6 @@ pip install streamlit pandas sqlalchemy psycopg2-binary plotly
 
 - `dashboard_dw.py` — Código principal del dashboard.
 - `DDL.sql` — Script de creación de tablas del DW.
-- Carpeta `graficas/` — Aquí debes colocar las imágenes de las gráficas exportadas desde el dashboard.
 
 ---
 
@@ -70,7 +69,7 @@ pip install streamlit pandas sqlalchemy psycopg2-binary plotly
 
 ## Visualizaciones Incluidas
 
-Las siguientes gráficas se generan en el dashboard. **Debes exportarlas como imágenes (`.png`) y guardarlas en la carpeta `graficas/`** para documentación o reportes.
+Las siguientes gráficas se generan en el dashboard.
 
 1. **Top 10 Productos Más Vendidos**  
    ![Top 10 Productos](graficas/top10_productos-1.png)
