@@ -142,3 +142,31 @@ Cada gráfica se genera con Plotly y se muestra en Streamlit.
 Para dudas o mejoras, contacta al desarrollador del dashboard.
 
 ---
+
+## Cómo montar la base de datos en PostgreSQL
+
+1. **Instala PostgreSQL**  
+   Descarga e instala PostgreSQL desde [https://www.postgresql.org/download/](https://www.postgresql.org/download/).
+
+2. **Crea la base de datos**  
+   Abre la terminal de PostgreSQL (psql) o usa PgAdmin y ejecuta:
+
+   ```sql
+   CREATE DATABASE ecommerce_dw;
+   ```
+
+3. **Carga el esquema del DW**  
+   Ubica el archivo `DDL.sql` en tu equipo. Luego, desde la terminal, ejecuta:
+
+   ```sh
+   psql -U postgres -d ecommerce_dw -f DDL.sql
+   ```
+   > Cambia `postgres` por tu usuario si es diferente.
+
+4. **Carga tus datos**  
+   Inserta tus datos en las tablas creadas usando scripts SQL, PgAdmin o herramientas ETL.
+
+5. **Configura la conexión en el dashboard**  
+   Asegúrate de que la variable `DB_URL` en `dashboard_dw.py` tenga el usuario, contraseña y puerto correctos para tu instalación.
+
+---
