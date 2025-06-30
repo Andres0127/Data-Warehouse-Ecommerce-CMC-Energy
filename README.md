@@ -73,25 +73,25 @@ pip install streamlit pandas sqlalchemy psycopg2-binary plotly
 Las siguientes gráficas se generan en el dashboard. **Debes exportarlas como imágenes (`.png`) y guardarlas en la carpeta `graficas/`** para documentación o reportes.
 
 1. **Top 10 Productos Más Vendidos**  
-   ![Top 10 Productos](graficas/top10_productos.pdf)
+   ![Top 10 Productos](graficas/top10_productos-1.png)
 
 2. **Ventas por Categoría**  
-   ![Ventas por Categoría](graficas/ventas_categoria.pdf)
+   ![Ventas por Categoría](graficas/ventas_categoria-1.png)
 
 3. **Margen vs Volumen de Ventas (Productos)**  
-   ![Margen vs Volumen](graficas/margen_vs_volumen.pdf)
+   ![Margen vs Volumen](graficas/margen_vs_volumen-1.png)
 
 4. **Comparativa de Ventas por Canal**  
-   ![Ventas por Canal](graficas/ventas_por_canal.pdf)
+   ![Ventas por Canal](graficas/ventas_por_canal-1.png)
 
 5. **Tendencia de Ventas en el Tiempo**  
-   ![Tendencia de Ventas](graficas/tendencia_ventas.pdf)
+   ![Tendencia de Ventas](graficas/tendencia_ventas-1.png)
 
 6. **Ventas por Ciudad**  
-   ![Ventas por Ciudad](graficas/ventas_por_ciudad.pdf)
+   ![Ventas por Ciudad](graficas/ventas_por_ciudad-1.png)
 
 7. **Participación de Canales de Venta**  
-   ![Participación de Canales](graficas/participacion_canales.pdf)
+   ![Participación de Canales](graficas/participacion_canales-1.png)
 
 ---
 
